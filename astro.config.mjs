@@ -9,7 +9,7 @@ export default defineConfig({
         starlight({
             title: {
                 id: 'Belajar Laravel',
-                end: 'Learn Laravel',
+                en: 'Learn Laravel',
             },
             social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
             sidebar: [
