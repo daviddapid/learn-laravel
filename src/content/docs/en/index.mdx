@@ -1,38 +1,28 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: The Fastest & Easiest Way to Learn Laravel
+description: Master Laravel from scratch — build powerful web applications with one of the most popular PHP frameworks.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Stop jumping between tutorials. This is your one-stop guide to learning Laravel from start to finish. Easy to follow and completely free.
   image:
-    file: /src/assets/houston.webp
+    file: /src/assets/svg/laravel-logo.svg
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: ./en/getting-started/introduction
       icon: right-arrow
-    - text: Read the Starlight docs
+    - text: Give a Star on GitHub
       link: https://starlight.astro.build
-      icon: external
+      icon: github
       variant: minimal
 banner:
   content: ❗ This tutorial is still under development and may not be complete yet. Stay tuned for updates! ❗
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside, LinkButton } from '@astrojs/starlight/components';
 
-## Next steps
+<Aside title='Note' type='tip'>
+This tutorial is available in both **English** and **Indonesian**. If you're from Indonesia, we recommend following the Indonesian version, as it has been specially tailored for Indonesian learners (the author is Indonesian as well).
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+
+<LinkButton variant='secondary' href={'./id/getting-started/introduction'} icon='right-arrow'>Open Indonesia Version</LinkButton>
+</Aside>

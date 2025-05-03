@@ -7,38 +7,67 @@ banner:
 
 import { Steps, FileTree, Aside } from "@astrojs/starlight/components";
 import { Image } from "astro:assets";
-import donwloadComposerImg from "/src/assets/images/download-composer.png";
-import donwlodXamppImg from "/src/assets/images/download-xampp.png";
+import donwloadComposerImg from "/src/assets/images/installation/download-composer.png";
+import donwlodXamppImg from "/src/assets/images/installation/download-xampp.png";
 
-This guide will help you to install laravel and all of their depencencies in your machine (laptop/pc).
+Sebelum kita dapat membuat aplikasi web dengan laravel, kita perlu menginstall beberapa tools dibawah ini:
 
-Before we start building with Laravel, make sure your machine has the following tools installed
-
-- **XAMPP** (with PHP >= 8.2)
+- **XAMPP** (dengan PHP >= 8.2)
 - **Composer**
 - **Laravel CLI**
 
-follow these steps to install those tools:
+Ikuti langkah-langkah berikut, untuk menginstall ketiga tools diatas:
 
 <Steps>
-1. ## Install Composer
+1.  ## Install XAMPP
 
-    Download and install Composer from the official site: https://getcomposer.org/
-    <Image src={donwloadComposerImg} alt={"donwload composer"}/>
-    if composer is being donwloaded, then you can run the installer, and just spam click next/ok
-
-2.  ## Install XAMPP
-
-    Download and install XAMPP from the official site: https://www.apachefriends.org/
+    Download dan install XAMPP dari situs resminya: https://www.apachefriends.org/
 
     <Image src={donwlodXamppImg} alt={"donwload XAMPP"} />
+    
+    Setelah berhasil download, maka kita akan mendapatkan installer nya. Run installer nya dan biarkan semua pengaturan default. 
 
-    <Aside title="info" type="note">
-      there are other PHP development environment like
-      [Laragon](https://laragon.org/), [MAMP](https://www.mamp.info/), etc. But
-      i recommend you to download xampp, because it's the most simple fully free
-      for now
-    </Aside>
+    Untuk memastikan apakah XAMPP berhasil di install, kalian dapat buka terminal (CMD/Powershell/Gitbash) dan jalankan kode di bawah ini
+    ```bash
+    php -v
+    ```
+
+    Jika proses install sukses, seharusnya akan muncul semacam info versi php seperti berikut:
+    ```cmd
+    PHP 8.2.27 (cli) (built: Dec 17 2024 14:38:40) (ZTS Visual C++ 2019 x64)
+    Copyright (c) The PHP Group
+    Zend Engine v4.2.27, Copyright (c) Zend Technologies
+    ```
+
+2. ## Install Composer
+
+    Download dan install Composer dari situs resminya: https://getcomposer.org/
+    <Image src={donwloadComposerImg} alt={"donwload composer"}/>
+
+    setelah berhasil mendownload, kita akan mendapatkan sebuah file installer. Cukup run installer nya dan biarkan semua pilihan/konfigurasi/checklist tetap default.
+
+    selanjutnya pastikan bahwa composer sukses diinstall dengan membuat terminal dan run kode berikut:
+
+    ```bash
+    composer -v
+    ```
+
+    jika sukses maka terminal akan menampilkan versi dari composer seperti di bawah ini:
+    ```bat
+       ______
+      / ____/___  ____ ___  ____  ____  ________  _____
+     / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+    / /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+    \____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                        /_/
+    Composer version 2.8.1 2024-10-04 11:31:01
+
+    Usage:
+    command [options] [arguments]
+    ...
+
+    ```
+
 
 3.  ## Install Laravel
 
