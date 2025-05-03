@@ -5,8 +5,6 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://daviddapid.github.io/learn-laravel/',
-    base: '/learn-laravel',
-    trailingSlash: 'always',
     integrations: [
         starlight({
             title: {
