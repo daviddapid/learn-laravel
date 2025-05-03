@@ -6,21 +6,40 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
     integrations: [
         starlight({
-            title: 'Learn Laravel',
+            title: {
+                id: 'Belajar Laravel',
+                end: 'Learn Laravel',
+            },
             social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
             sidebar: [
                 {
-                    label: 'Guides',
+                    label: 'Getting Started',
                     items: [
-                        // Each item here is one entry in the navigation menu.
-                        { label: 'Example Guide', slug: 'guides/example' },
+                        {
+                            label: 'Introduction',
+                            slug: 'getting-started/introduction',
+                            translations: {
+                                id: 'Pengenalan',
+                            },
+                        },
+                        {
+                            label: 'Installation',
+                            slug: 'getting-started/installation',
+                            translations: {
+                                id: 'Instalasi',
+                            },
+                        },
                     ],
                 },
-                {
-                    label: 'Reference',
-                    autogenerate: { directory: 'reference' },
-                },
             ],
+            defaultLocale: 'id',
+            locales: {
+                id: { label: 'Indonesia' },
+                en: { label: 'English' },
+            },
+            components: {
+                Banner: './src/components/override/Banner.astro',
+            },
         }),
     ],
 });

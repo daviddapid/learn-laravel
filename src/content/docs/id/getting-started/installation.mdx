@@ -1,0 +1,59 @@
+---
+title: Installation
+description: Step-by-step guide to install Laravel on your local machine.
+banner:
+  content: ❗ Tutorial ini belum selesai dan masih dalam tahap pengembangan. Stay tuned for updates! ❗
+---
+
+import { Steps, FileTree, Aside } from "@astrojs/starlight/components";
+import { Image } from "astro:assets";
+import donwloadComposerImg from "/src/assets/images/download-composer.png";
+import donwlodXamppImg from "/src/assets/images/download-xampp.png";
+
+This guide will help you to install laravel and all of their depencencies in your machine (laptop/pc).
+
+Before we start building with Laravel, make sure your machine has the following tools installed
+
+- **XAMPP** (with PHP >= 8.2)
+- **Composer**
+- **Laravel CLI**
+
+follow these steps to install those tools:
+
+<Steps>
+1. ## Install Composer
+
+    Download and install Composer from the official site: https://getcomposer.org/
+    <Image src={donwloadComposerImg} alt={"donwload composer"}/>
+    if composer is being donwloaded, then you can run the installer, and just spam click next/ok
+
+2.  ## Install XAMPP
+
+    Download and install XAMPP from the official site: https://www.apachefriends.org/
+
+    <Image src={donwlodXamppImg} alt={"donwload XAMPP"} />
+
+    <Aside title="info" type="note">
+      there are other PHP development environment like
+      [Laragon](https://laragon.org/), [MAMP](https://www.mamp.info/), etc. But
+      i recommend you to download xampp, because it's the most simple fully free
+      for now
+    </Aside>
+
+3.  ## Install Laravel
+
+    now open your terminal, you can use CMD, Powershell, or GitBash. Then copy this code bellow, and hit enter to run it:
+
+    ```bash
+    composer global require laravel/installer
+    ```
+
+    after it complete, type this code bellow and hit enter to make a laravel project:
+
+    ```bash
+    laravel new example-app
+    ```
+
+    then you'll get some promp and question about how you build laravel
+
+</Steps>
