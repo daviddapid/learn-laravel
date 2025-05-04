@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://daviddapid.github.io/learn-laravel',
+    site: 'https://daviddapid.github.io/learn-laravel/',
     base: isDev ? '/' : '/learn-laravel/',
     integrations: [
         starlight({
